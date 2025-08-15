@@ -1,4 +1,4 @@
-# ![Project Header Image](images/project_header_img.png)
+# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Template Instructions
 

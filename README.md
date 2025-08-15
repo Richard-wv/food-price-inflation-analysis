@@ -1,72 +1,165 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Project Header Image](images/project_header_img.png)
 
-## Template Instructions
+## Food Price Inflation Analysis
+***A data-driven analysis of food price inflation***
 
-Welcome,
+---
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+### Executive Summary
+### Dataset Content
+### Business Requirements
+### Hypotheses
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+In order to better understand the drivers of food price inflation, we propose the following hypotheses:
 
-## How to use this repo
+### H1 – Geopolitical Unrest and Inflation
+- **Null Hypothesis:** There is no relationship between geopolitical unrest or crises and food inflation rates.  
+- **Alternative Hypothesis:** Countries experiencing greater geopolitical unrest or crises will have higher food inflation rates.  
+- **Rationale:** Conflict disrupts supply chains, weakens currencies, and raises import costs. Outliers such as Lebanon, South Sudan, and Syria suggest that crises may drive extreme inflation.
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+---
 
-1. Copy the URL of your repository to your clipboard.
+### H2 – Volatility and Inflation
+- **Null Hypothesis:** Food price volatility is independent of food inflation rates.  
+- **Alternative Hypothesis:** Countries with higher average annualized food price volatility will also have higher inflation rates.  
+- **Rationale:** Unstable markets often face upward price pressures. Our scatter plot indicates a moderate positive relationship between volatility and inflation, with countries like Lebanon and Sudan showing both high inflation and volatility.
 
-1. In VS Code, select **File** -> **Open Folder**.
+---
 
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
+### H3 – Data Coverage and Inflation
+- **Null Hypothesis:** Inflation outcomes are influenced by the level of data coverage.  
+- **Alternative Hypothesis:** Inflation outcomes are independent of data coverage levels.  
+- **Rationale:** If countries with low data coverage systematically showed extreme inflation, results would be questionable. However, our analysis shows extreme inflation even in countries with high coverage, suggesting that inflation results reflect real economic pressures.
 
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
+---
 
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
+**Summary:**  
+- **H1** explores external, real-world drivers of inflation (geopolitical unrest).  
+- **H2** tests an internal relationship within the dataset (volatility vs inflation).  
+- **H3** checks data robustness by ruling out potential bias from coverage.
+### Project Plan
+- **Data Cleaning and Feature Engineering Summary**
+- **Exploratory Data Analysis Summary**
 
-1. In VS Code, select **File** > **Open Folder** again.
+# Data Analysis Summary
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
+In this project, we explored a dataset on **food price inflation** across multiple countries.  
+Our analysis followed these main steps:
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
+1. **Data Cleaning & Preparation**
+   - Loaded the dataset and parsed the '*date'* column into a usable format.
+   - Checked for missing values and duplicates (none found).
+   - Verified data types and created a new column for absolute drawdown values.
+   - Confirmed data coverage and consistency across countries.
 
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
+2. **Hypotheses Formulation**
+   - **H1:** Countries facing geopolitical unrest will have higher food inflation.  
+   - **H2:** Countries with higher food price volatility will also have higher inflation.  
+   - **H3:** Inflation outcomes are independent of data coverage levels.
 
-1. Choose **Venv** from the dropdown list.
+3. **Univariate Analysis**
+   - Examined the distribution of food inflation: **positively skewed**, with most countries at low/moderate inflation but a few extreme outliers (e.g., Lebanon at 139%).  
+   - Identified several countries in **deflation** (e.g., Burkina Faso, Somalia, Mali).  
+   - Summarised key statistics for volatility, drawdown, and coverage.
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+4. **Bivariate Analysis & Hypothesis Testing**
+   - **H1:** Visualised inflation by country, highlighting crisis nations. Found strong qualitative evidence that unrest is linked to high inflation.  
+   - **H2:** Scatter plot of inflation vs volatility showed a positive trend, supporting the hypothesis.  
+   - **H3:** Scatter plot of inflation vs data coverage showed no systematic bias, supporting data robustness.
 
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
+5. **Conclusions**
+   - Food inflation is highly uneven across countries: most are stable, but a few face extreme crises.  
+   - High inflation is often paired with high volatility, compounding instability.  
+   - Past drawdowns do not predict current inflation.  
+   - Inflation outcomes are not explained by data coverage, strengthening confidence in results.
 
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
+---
 
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
+This analysis provides a **clear evidence base** for communicating global food inflation patterns and supports the development of an accessible dashboard for stakeholders.
 
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
+- **Hypothesis Testing Summary**
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
+We tested three hypotheses using our dataset. The results are summarised below:
 
- ```console
- pip3 install -r requirements.txt
- ```
+### H1 - Geopolitical Unrest and Inflation
+- **Result:** Supported qualitatively.  
+- Crisis-affected countries (**Lebanon, South Sudan, Syria, Myanmar, Haiti**) are clustered at the top of the inflation distribution.  
+- This aligns with global reporting that political/economic instability drives food inflation.  
+- Even without a direct “conflict” variable, the evidence suggests unrest is strongly linked to extreme inflation outcomes.
 
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
+---
 
-1. Click the **kernel** button and choose **Python Environments**.
+### H2 - Volatility and Inflation
+- **Result:** Supported.  
+- A moderate positive trend is observed: higher food price volatility is associated with higher inflation.  
+- Example: **Lebanon, South Sudan, and Sudan** show both high inflation and high volatility, while stable markets like **Cameroon and Iraq** show low levels of both.  
+- This reinforces that **price surges often come with instability**.
 
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
+---
 
-```console
-! python --version
-```
+### H3 - Data Coverage and Inflation
+- **Result:** Supported.  
+- Extreme inflation outcomes appear even in countries with relatively high coverage.  
+- Low coverage countries do not systematically show more extreme values.  
+- Suggests that results are **robust** and not driven by data artefacts.
 
-## Deployment Reminders
+---
 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+## Overall Conclusion
+- **Food inflation is not evenly distributed**: most countries are stable, but a small set of crisis-affected nations face extreme inflation and volatility.  
+- **Volatility amplifies inflation pressures**, highlighting that price surges are also unstable and unpredictable.  
+- **Data coverage does not bias results**, increasing confidence in our findings.  
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+These insights provide a clear, evidence-based foundation for communicating results in our dashboard, showing both the **drivers of food inflation** and the **robustness of the dataset**.
+
+---
+
+### Analysis Techniques Used
+## Data Analysis Techniques Used
+
+- **Data Cleaning**
+  - Checked and confirmed no missing values or duplicate rows.
+  - Converted *'date'* column to datetime format and verified data types.
+  - Created derived features (e.g., absolute drawdown values).
+
+- **Univariate Analysis**
+  - Summary statistics (mean, median, quartiles, skewness).
+  - Histograms and boxplots to show distributions and outliers.
+  - Ranking of countries by inflation (top/bottom performers).
+
+- **Bivariate Analysis**
+  - Correlation analysis between inflation and other numeric variables.
+  - Scatter plots (inflation vs volatility, drawdown, and data coverage).
+  - Highlighted extreme cases and outliers with country-level context.
+
+- **Hypothesis Testing (Exploratory)**
+  - H1: Compared inflation levels across crisis vs non-crisis countries (qualitative evidence).  
+  - H2: Assessed relationship between inflation and volatility (scatter + regression trend).  
+  - H3: Checked for bias by comparing inflation against data coverage (scatter).
+
+- **Visualisation**
+  - Bar charts (inflation by country, top/bottom 5 comparisons).
+  - Scatter plots (with interactive Plotly for hover-based exploration).
+  - Boxplots to illustrate skewness and outliers.
+
+### Ethical Considerations
+
+- Data coverage and accuracy vary by country, so results should be interpreted with caution.  
+- Food inflation is closely linked to human well-being; presenting results without context risks oversimplifying human suffering.  
+- Countries with limited statistical capacity may appear more volatile, introducing bias.  
+- This analysis is exploratory and educational, not a policy tool, and findings should not be used in isolation to guide interventions.  
+
+### Dashboard Design
+### Unfixed Bugs
+### Limitations
+### Deployment
+### Main Data Analysis Libraries
+- Python
+- Pandas
+- NumPy
+- Seaborn
+- Plotly
+- MatPlotLib
+
+### Credits
+### Acknowledgements

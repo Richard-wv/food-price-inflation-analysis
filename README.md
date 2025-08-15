@@ -87,6 +87,7 @@ We tested three hypotheses using our dataset. The results are summarised below:
 - This aligns with global reporting that political/economic instability drives food inflation.  
 - Even without a direct “conflict” variable, the evidence suggests unrest is strongly linked to extreme inflation outcomes.
 
+![H1 Plot](images/h1_food_inflation_by_crisis_countries.png)
 ---
 
 ### H2 - Volatility and Inflation
@@ -95,6 +96,7 @@ We tested three hypotheses using our dataset. The results are summarised below:
 - Example: **Lebanon, South Sudan, and Sudan** show both high inflation and high volatility, while stable markets like **Cameroon and Iraq** show low levels of both.  
 - This reinforces that **price surges often come with instability**.
 
+![H2 Plot](images/h2_inflation_vs_food_price_volatility.png)
 ---
 
 ### H3 - Data Coverage and Inflation
@@ -103,6 +105,7 @@ We tested three hypotheses using our dataset. The results are summarised below:
 - Low coverage countries do not systematically show more extreme values.  
 - Suggests that results are **robust** and not driven by data artefacts.
 
+![H3 Plot](images/h3_inflation_vs_data_coverage.png)
 ---
 
 ## Overall Conclusion

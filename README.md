@@ -1,72 +1,53 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Food Price Inflation Analysis
 
-## Template Instructions
+## Project Overview
 
-Welcome,
+A comprehensive data analysis project developed for a data analytics hackathon, focusing on global food price inflation trends using World Bank's Real-Time Food Price Monitoring data.
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+## Hackathon Achievement
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+This project demonstrates advanced ETL (Extract, Transform, Load) capabilities through:
+- **Data Integration**: Successfully merged complex datasets with 4,773+ duplicate key resolution
+- **Feature Engineering**: Created 9 analytical features including time-series and categorical variables
+- **Data Quality**: Implemented 6-point validation system ensuring zero data quality issues
+- **Pipeline Automation**: Built reusable, production-ready data processing workflow
 
-## How to use this repo
+## Dataset & Structure
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+**Source**: Global Food Price Inflation 2024 (Kaggle)
+- Original datasets: Country-level + Item-level food price data
+- Final output: Clean, analysis-ready dataset with 18 optimized columns
 
-1. Copy the URL of your repository to your clipboard.
-
-1. In VS Code, select **File** -> **Open Folder**.
-
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
-
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
-
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
-
-1. In VS Code, select **File** > **Open Folder** again.
-
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
-
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
-
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
-
-1. Choose **Venv** from the dropdown list.
-
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
-
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
-
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
-
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
-
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
-
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
-
- ```console
- pip3 install -r requirements.txt
- ```
-
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
-
-1. Click the **kernel** button and choose **Python Environments**.
-
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
-
-```console
-! python --version
+```
+data/
+├── Original datasets (2 files)
+├── Cleaned datasets (4 intermediate files)  
+└── food_price_feature_engineered_clean.csv (final)
 ```
 
-## Deployment Reminders
+## Technical Implementation
 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+**Core ETL Pipeline** ([`jupyter_notebooks/etl.ipynb`](jupyter_notebooks/etl.ipynb)):
+1. **Data Cleaning**: Standardized columns, parsed dates, coerced numeric fields
+2. **Smart Merging**: Multi-level join strategy with duplicate resolution
+3. **Feature Engineering**: Time, price, and categorical feature creation
+4. **Validation**: Comprehensive quality checks and automated cleanup
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+## Key Technical Features
+
+✅ **Robust Error Handling**: Resolved 4,773 duplicate keys before merging  
+✅ **Feature Engineering**: 9 analytical variables (time, price trends, categories)  
+✅ **Data Validation**: 6-point quality system with automated cleanup  
+✅ **Production Ready**: Reusable functions and comprehensive documentation  
+
+## Technologies
+
+- **Python 3.12+** | **Pandas** | **NumPy** | **Jupyter Notebooks**
+
+## Results
+
+**Final Dataset**: 18 columns, zero quality issues, ready for analysis and visualization
+- Successfully processed complex real-world data with missing values and duplicates
+- Created scalable ETL pipeline suitable for production environments
+- Demonstrated advanced data engineering skills through comprehensive validation
+

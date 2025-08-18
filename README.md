@@ -1,11 +1,11 @@
 # ![Project Header Image](images/project_header_img.png)
 
-## Food Price Inflation Analysis
-***A data-driven analysis of food price inflation***
+>## Food Price Inflation Analysis
+#### ***A data-driven analysis of food price inflation***
 
 ---
 
-### Executive Summary
+>### Executive Summary
 This project explores global food price inflation using the Monthly Food Price Estimates dataset from Kaggle.
 Our goal was to understand the drivers of food inflation, test hypotheses about volatility and crisis effects, and evaluate the robustness of the data. The analysis provides an evidence-based foundation for communicating results through an interactive dashboard in Power BI.
 
@@ -14,7 +14,7 @@ A small set of countries face extreme inflation and volatility, often linked to 
 Price volatility amplifies inflationary pressures, making markets unstable.
 Data coverage does not bias results, increasing confidence in findings.
 
-### Dataset Content
+>### Dataset Content
 After data cleaning, the following columns were retained for analysis:
 - country: The name of the country where the food price data was recorded.
 - iso3: The three-letter ISO 3166-1 alpha-3 code representing the country.
@@ -35,14 +35,14 @@ After data cleaning, the following columns were retained for analysis:
 - month: The month corresponding to the recorded data.
 - inflation_band: A categorical classification indicating the range of inflation rates (e.g., low, medium, high).
 
-### Business Requirements
+>### Business Requirements
 The analysis aims to:  
 1. Identify **patterns and drivers** of food price inflation.  
 2. Test whether **volatility and crises** are associated with higher inflation.  
 3. Assess whether **data coverage** biases inflation outcomes.  
 4. Provide an **evidence base for stakeholders** via an interactive dashboard.
 
-### Hypotheses
+>### Hypotheses
 In order to better understand the drivers of food price inflation, we propose the following hypotheses:
 
 ### H1 – Geopolitical Unrest and Inflation
@@ -73,7 +73,10 @@ In order to better understand the drivers of food price inflation, we propose th
 
 ---
 
-### Project Plan
+>### Project Plan
+
+### Data Engineering Summary
+
 - **ETL Pipeline Development**  
   - Built an end-to-end **Extract, Transform, Load (ETL) pipeline** in Jupyter Notebook.  
   - Extracted the dataset from Kaggle and ingested it into the project workspace.  
@@ -97,7 +100,7 @@ In order to better understand the drivers of food price inflation, we propose th
 - **Dashboard Creation (Power BI)**  
   - Designed an interactive dashboard summarising inflation trends, country comparisons, and volatility patterns.  
 
-## Data Analysis Summary
+### Data Analysis Summary
 
 In this project, we explored a dataset on **food price inflation** across multiple countries.  
 Our analysis followed these main steps:
@@ -164,7 +167,7 @@ We tested three hypotheses using our dataset. The results are summarised below:
 ![H3 Plot](images/h3_inflation_vs_data_coverage.png)
 ---
 
-## Overall Conclusion
+### Overall Conclusion
 - **Food inflation is not evenly distributed**: most countries are stable, but a small set of crisis-affected nations face extreme inflation and volatility.  
 - **Volatility amplifies inflation pressures**, highlighting that price surges are also unstable and unpredictable.  
 - **Data coverage does not bias results**, increasing confidence in our findings.  
@@ -173,7 +176,7 @@ These insights provide a clear, evidence-based foundation for communicating resu
 
 ---
 
-## Data Analysis Techniques Used
+>### Data Analysis Techniques Used
 
 - **Data Cleaning**
   - Checked and confirmed no missing values or duplicate rows.
@@ -200,13 +203,13 @@ These insights provide a clear, evidence-based foundation for communicating resu
   - Scatter plots (with interactive Plotly for hover-based exploration).
   - Boxplots to illustrate skewness and outliers.
 
-### Ethical Considerations
+>### Ethical Considerations
 - Data coverage and accuracy vary by country, so results should be interpreted with caution.  
 - Food inflation is closely linked to human well-being; presenting results without context risks oversimplifying human suffering.  
 - Countries with limited statistical capacity may appear more volatile, introducing bias.  
 - This analysis is exploratory and educational, not a policy tool, and findings should not be used in isolation to guide interventions.  
 
-## Dashboard Design
+>### Dashboard Design
 
 ![Dashboard Image](images/food_analysis_dash.png)
 
@@ -231,13 +234,18 @@ The design balances clarity for non-technical users with depth for analysts.
 
 ---
 
-### Limitations
+>### Limitations
 
-This project was completed under hackathon time constraints and is therefore focused on delivering a **minimum viable analysis and dashboard** rather than a comprehensive study. The dataset itself is relatively small (25 countries, 8 dates), making it more of a snapshot than a long-term global view. While we found strong qualitative evidence that crisis-affected countries face higher inflation, the dataset does not contain a direct measure of geopolitical unrest, so this hypothesis could not be formally tested. Data coverage also varies between countries, and while we found no systematic bias, limited coverage may reduce representativeness for some cases. Finally, many external drivers of food inflation (such as exchange rates, trade restrictions, or humanitarian conditions) were outside the scope of this dataset, meaning results should be interpreted as **exploratory rather than definitive**.
+This project was completed under hackathon time constraints and is therefore focused on delivering a **minimum viable analysis and dashboard** rather than a comprehensive study. The dataset itself is relatively small (25 countries, 8 dates), making it more of a snapshot than a long-term global view. 
+
+While we found strong qualitative evidence that crisis-affected countries face higher inflation, the dataset does not contain a direct measure of geopolitical unrest, so this hypothesis could not be formally tested. 
+
+Data coverage also varies between countries, and while we found no systematic bias, limited coverage may reduce representativeness for some cases. Finally, many external drivers of food inflation (such as exchange rates, trade restrictions, or humanitarian conditions) were outside the scope of this dataset, meaning results should be interpreted as **exploratory rather than definitive**.
 
 ---
 
-### Dataset Cleaning Challenges
+>### Dataset Cleaning Challenges
+
 Several data quality limitations were encountered during the ETL process:
 - **Duplicate Keys**: Resolved 4,773 duplicate key combinations in country-level data, requiring systematic deduplication that may have reduced data granularity
 - **Date Parsing**: Multiple date formats required standardisation with some temporal data loss during conversion
@@ -257,7 +265,7 @@ Several data quality limitations were encountered during the ETL process:
   - Correlations observed in the dataset do not imply causation; findings are exploratory and educational rather than prescriptive.
 
 
-## Analytical Impact
+>### Analytical Impact
 
 - Final dataset reduced to 18 validated columns after extensive cleanup
 - Countries with sparse data may be underrepresented in analysis
@@ -266,12 +274,13 @@ Several data quality limitations were encountered during the ETL process:
 
 *These limitations reflect real-world data challenges in international economic datasets and highlight the importance of robust validation in hackathon environments.*
 
-### Deployment
+>### Deployment
+
 - Analysis performed in Jupyter Notebook (Python).  
 - Dashboard created and deployed in **Power BI**.  
 - Repository hosted on **GitHub** for transparency and reproducibility.  
 
-### Main Data Analysis Libraries
+>### Main Data Analysis Libraries
 - Python
 - Pandas
 - NumPy
@@ -279,24 +288,28 @@ Several data quality limitations were encountered during the ETL process:
 - Plotly
 - MatPlotLib
 
-### Team Roles
+>### Team Roles
 - **Harpreet (Project Manager): ** Oversaw planning, coordination, documentation, and GitHub project management. Also designed and developed the interactive dashboard in Power BI  
 - **Aaminah (ETL Lead): ** Handled data extraction, transformation, and preprocessing in Python  
 - **Richard (EDA Lead): **
 
-### Reflections
-Our team worked collaboratively throughout this project, with each member contributing their skills and insights to ensure a comprehensive analysis. Despite a brief absence from one of the memebers part due to personal reasons, the group maintained strong communication and coordination, which allowed us to stay on track and complete the tasks efficiently. We supported one another in data cleaning, hypothesis testing, and visualisation, fostering a positive and productive working environment.  
+>### Reflections
+
+Our team worked collaboratively throughout this project, with each member contributing their skills and insights to ensure a comprehensive analysis. Despite a brief absence from one of the members part due to personal reasons, the group maintained strong communication and coordination, which allowed us to stay on track and complete the tasks efficiently. We supported one another in data cleaning, hypothesis testing, and visualisation, fostering a positive and productive working environment.  
 
 Time constraints posed a challenge, limiting our ability to explore certain aspects of the dataset in greater depth. However, we managed to prioritise key analyses and deliver clear, evidence-based findings while maintaining quality. Overall, the experience highlighted the importance of teamwork, flexibility, and effective time management, and it strengthened our ability to collaborate on complex data projects under real-world conditions.
 
-### Credits
+>### Credits
+
 - **ChatGPT:** Supported with code guidance, data exploration ideas, markdown writing, and error troubleshooting  
 - **GitHub Copilot:** Assisted with syntax and repetitive code blocks during Python scripting  
 - **Kaggle:** - Dataset: [Monthly Food Price Estimates](https://www.kaggle.com/datasets/anshtanwar/monthly-food-price-estimates)  
 - **Code Institute:** For the project structure and teamwork framework  
-- **Team Members:** Harpreet, Aaminah and Richard
--   
-### Acknowledgements
+- **Team Members:** Harpreet, Aaminah and Richard 
+-   **Markdown Cheatsheet** found [here](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet)
+
+>### Acknowledgements
+
 Thanks to:
 * Code Institute for the project structure
 * Kaggle for providing the dataset

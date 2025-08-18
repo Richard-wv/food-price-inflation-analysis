@@ -73,7 +73,7 @@ In order to better understand the drivers of food price inflation, we propose th
 - **Dashboard Creation (Power BI)**  
   - Designed an interactive dashboard summarising inflation trends, country comparisons, and volatility patterns.  
 
-# Data Analysis Summary
+## Data Analysis Summary
 
 In this project, we explored a dataset on **food price inflation** across multiple countries.  
 Our analysis followed these main steps:
@@ -183,8 +183,11 @@ These insights provide a clear, evidence-based foundation for communicating resu
 - Countries with limited statistical capacity may appear more volatile, introducing bias.  
 - This analysis is exploratory and educational, not a policy tool, and findings should not be used in isolation to guide interventions.  
 
-### Dashboard Design
-The Power BI dashboard was designed to:  
+## Dashboard Design
+
+![Dashboard Image](images/food_analysis_dash.png)
+
+The **Power BI dashboard** was designed to:  
 - Provide **quick global insights** through KPIs (average inflation, top/bottom countries).  
 - Allow **interactive exploration** with slicers (country, time).  
 - Use **scatter plots and bar charts** to show relationships.  
@@ -192,6 +195,18 @@ The Power BI dashboard was designed to:
 **Due to limitations with the version of PowerBI being used, a link cannot be provided, however, a file is available in the 'dashboard' folder labelled *food_analysis_dashboard*
 
 The design balances clarity for non-technical users with depth for analysts.
+
+### Dashboard Colour Palette
+
+|  Colour  |  Hash Code  |
+|----------|-------------|
+|  Blue  |  #0f3d6e  |
+|  Red  |  #FA1818  |
+|  Green  |  #1C9E10  |
+|  Black  |  #252423  |
+|  White  |  #FFFFFF  |
+
+---
 
 ### Unfixed Bugs
 

@@ -6,8 +6,25 @@
 ---
 
 ### Executive Summary
+This project explores global food price inflation using the Monthly Food Price Estimates dataset from Kaggle.
+Our goal was to understand the drivers of food inflation, test hypotheses about volatility and crisis effects, and evaluate the robustness of the data. The analysis provides an evidence-based foundation for communicating results through an interactive dashboard in Power BI.
+
+Key findings:
+
+A small set of countries face extreme inflation and volatility, often linked to crises.
+Price volatility amplifies inflationary pressures, making markets unstable.
+
+Data coverage does not bias results, increasing confidence in findings.
+
 ### Dataset Content
+
 ### Business Requirements
+The analysis aims to:  
+1. Identify **patterns and drivers** of food price inflation.  
+2. Test whether **volatility and crises** are associated with higher inflation.  
+3. Assess whether **data coverage** biases inflation outcomes.  
+4. Provide an **evidence base for stakeholders** via an interactive dashboard.
+
 ### Hypotheses
 
 In order to better understand the drivers of food price inflation, we propose the following hypotheses:
@@ -37,9 +54,26 @@ In order to better understand the drivers of food price inflation, we propose th
 - **H1** explores external, real-world drivers of inflation (geopolitical unrest).  
 - **H2** tests an internal relationship within the dataset (volatility vs inflation).  
 - **H3** checks data robustness by ruling out potential bias from coverage.
+
+---
+
 ### Project Plan
-- **Data Cleaning and Feature Engineering Summary**
-- **Exploratory Data Analysis Summary**
+- **Data Cleaning & Feature Engineering**  
+  - Verified no missing values or duplicates.  
+  - Converted date fields into usable formats.  
+  - Engineered derived metrics (absolute drawdowns).  
+
+- **Exploratory Data Analysis**  
+  - Univariate analysis of inflation distributions and outliers.  
+  - Bivariate testing for volatility, crises, and data coverage effects.  
+  - Visual storytelling with bar charts, scatter plots, and boxplots.  
+
+- **Hypothesis Testing**  
+  - Assessed evidence qualitatively and quantitatively.  
+  - Visualised extreme cases (e.g., Lebanon, Sudan).  
+
+- **Dashboard Creation (Power BI)**  
+  - Designed an interactive dashboard summarising inflation trends, country comparisons, and volatility patterns.  
 
 # Data Analysis Summary
 

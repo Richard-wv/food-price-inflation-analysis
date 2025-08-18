@@ -10,13 +10,12 @@ This project explores global food price inflation using the Monthly Food Price E
 Our goal was to understand the drivers of food inflation, test hypotheses about volatility and crisis effects, and evaluate the robustness of the data. The analysis provides an evidence-based foundation for communicating results through an interactive dashboard in Power BI.
 
 Key findings:
-
 A small set of countries face extreme inflation and volatility, often linked to crises.
 Price volatility amplifies inflationary pressures, making markets unstable.
-
 Data coverage does not bias results, increasing confidence in findings.
 
 ### Dataset Content
+
 
 ### Business Requirements
 The analysis aims to:  
@@ -26,7 +25,6 @@ The analysis aims to:
 4. Provide an **evidence base for stakeholders** via an interactive dashboard.
 
 ### Hypotheses
-
 In order to better understand the drivers of food price inflation, we propose the following hypotheses:
 
 ### H1 – Geopolitical Unrest and Inflation
@@ -180,16 +178,32 @@ These insights provide a clear, evidence-based foundation for communicating resu
   - Boxplots to illustrate skewness and outliers.
 
 ### Ethical Considerations
-
 - Data coverage and accuracy vary by country, so results should be interpreted with caution.  
 - Food inflation is closely linked to human well-being; presenting results without context risks oversimplifying human suffering.  
 - Countries with limited statistical capacity may appear more volatile, introducing bias.  
 - This analysis is exploratory and educational, not a policy tool, and findings should not be used in isolation to guide interventions.  
 
 ### Dashboard Design
+The Power BI dashboard was designed to:  
+- Provide **quick global insights** through KPIs (average inflation, top/bottom countries).  
+- Allow **interactive exploration** with slicers (country, time).  
+- Use **scatter plots and bar charts** to show relationships.  
+- Apply a **consistent, high-contrast colour scheme** for readability.  
+**Due to limitations with the version of PowerBI being used, a link cannot be provided, however, a file is available in the 'dashboard' folder labelled *food_analysis_dashboard*
+
+The design balances clarity for non-technical users with depth for analysts.
+
 ### Unfixed Bugs
+
+
 ### Limitations
+
+
 ### Deployment
+- Analysis performed in Jupyter Notebook (Python).  
+- Dashboard created and deployed in **Power BI**.  
+- Repository hosted on **GitHub** for transparency and reproducibility.  
+
 ### Main Data Analysis Libraries
 - Python
 - Pandas
@@ -199,4 +213,16 @@ These insights provide a clear, evidence-based foundation for communicating resu
 - MatPlotLib
 
 ### Credits
+- **ChatGPT:** Supported with code guidance, data exploration ideas, markdown writing, and error troubleshooting  
+- **GitHub Copilot:** Assisted with syntax and repetitive code blocks during Python scripting  
+- **Kaggle:** - Dataset: [Monthly Food Price Estimates](https://www.kaggle.com/datasets/anshtanwar/monthly-food-price-estimates)  
+- **Code Institute:** For the project structure and teamwork framework  
+- **Team Members:** Harpreet, Aaminah and Richard
+-   
 ### Acknowledgements
+Thanks to:
+* Code Institute for the project structure
+* Kaggle for providing the dataset
+* OpenAI for ChatGPT
+* GitHub Copilot for coding support
+* Code Institute peers for being supportive along the way

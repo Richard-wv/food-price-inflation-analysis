@@ -173,7 +173,6 @@ These insights provide a clear, evidence-based foundation for communicating resu
 
 ---
 
-### Analysis Techniques Used
 ## Data Analysis Techniques Used
 
 - **Data Cleaning**
@@ -233,7 +232,12 @@ The design balances clarity for non-technical users with depth for analysts.
 ---
 
 ### Limitations
-## Dataset Cleaning Challenges
+
+This project was completed under hackathon time constraints and is therefore focused on delivering a **minimum viable analysis and dashboard** rather than a comprehensive study. The dataset itself is relatively small (25 countries, 8 dates), making it more of a snapshot than a long-term global view. While we found strong qualitative evidence that crisis-affected countries face higher inflation, the dataset does not contain a direct measure of geopolitical unrest, so this hypothesis could not be formally tested. Data coverage also varies between countries, and while we found no systematic bias, limited coverage may reduce representativeness for some cases. Finally, many external drivers of food inflation (such as exchange rates, trade restrictions, or humanitarian conditions) were outside the scope of this dataset, meaning results should be interpreted as **exploratory rather than definitive**.
+
+---
+
+### Dataset Cleaning Challenges
 Several data quality limitations were encountered during the ETL process:
 - **Duplicate Keys**: Resolved 4,773 duplicate key combinations in country-level data, requiring systematic deduplication that may have reduced data granularity
 - **Date Parsing**: Multiple date formats required standardisation with some temporal data loss during conversion

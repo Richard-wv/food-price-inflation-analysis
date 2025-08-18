@@ -56,10 +56,16 @@ In order to better understand the drivers of food price inflation, we propose th
 ---
 
 ### Project Plan
+- **ETL Pipeline Development**  
+  - Built an end-to-end **Extract, Transform, Load (ETL) pipeline** in Jupyter Notebook.  
+  - Extracted the dataset from Kaggle and ingested it into the project workspace.  
+  - Transformed raw data through cleaning, formatting, and feature engineering.  
+  - Loaded processed data into analysis-ready structures for use in visualisations and hypothesis testing.  
+
 - **Data Cleaning & Feature Engineering**  
   - Verified no missing values or duplicates.  
   - Converted date fields into usable formats.  
-  - Engineered derived metrics (absolute drawdowns).  
+  - Engineered derived metrics (absolute drawdowns). 
 
 - **Exploratory Data Analysis**  
   - Univariate analysis of inflation distributions and outliers.  
@@ -213,6 +219,25 @@ The design balances clarity for non-technical users with depth for analysts.
 
 ### Limitations
 
+## Dataset Cleaning Challenges
+
+Several data quality limitations were encountered during the ETL process:
+
+- **Duplicate Keys**: Resolved 4,773 duplicate key combinations in country-level data, requiring systematic deduplication that may have reduced data granularity
+- **Date Parsing**: Multiple date formats required standardisation with some temporal data loss during conversion
+- **Numeric Conversion**: String-to-numeric coercion based on pattern matching may have missed edge cases
+- **Failed Features**: Some engineered features (e.g., `close_pct_change`) produced empty columns requiring cleanup
+- **Data Coverage**: Inconsistent completeness across countries and time periods affects trend analysis reliability
+- **String Standardization**: Country/item name harmonization may have incomplete matches affecting categorical analysis
+
+## Analytical Impact
+
+- Final dataset reduced to 18 validated columns after extensive cleanup
+- Countries with sparse data may be underrepresented in analysis
+- Extreme outliers (e.g., Lebanon at 139% inflation) retained but require contextual interpretation
+- Feature engineering limitations reduced some advanced analytical capabilities
+
+*These limitations reflect real-world data challenges in international economic datasets and highlight the importance of robust validation in hackathon environments.*
 
 ### Deployment
 - Analysis performed in Jupyter Notebook (Python).  

@@ -15,7 +15,25 @@ Price volatility amplifies inflationary pressures, making markets unstable.
 Data coverage does not bias results, increasing confidence in findings.
 
 ### Dataset Content
-
+After data cleaning, the following columns were retained for analysis:
+- country: The name of the country where the food price data was recorded.
+- iso3: The three-letter ISO 3166-1 alpha-3 code representing the country.
+- components: The specific food components or categories included in the price estimation (e.g., cereals, dairy).
+- currency: The currency used for pricing in the respective country (e.g., USD, EUR).
+- number_of_food_items: The count of distinct food items considered in the price estimation.
+- data_coverage_food: The percentage of the total food market covered by the dataset in the respective country.
+- average_annualized_food_inflation: The average yearly percentage change in food prices over the available period.
+- maximum_food_drawdown: The largest observed decline in food prices during the period, expressed as a percentage.
+- average_annualized_food_volatility: The average yearly fluctuation in food prices, indicating market stability.
+- date: The specific date when the price data was recorded.
+- open: The opening price of the food item on the recorded date.
+- high: The highest price reached by the food item on the recorded date.
+- low: The lowest price recorded for the food item on the given date.
+- close: The closing price of the food item at the end of the recorded date.
+- inflation: The percentage change in the food price compared to the previous period, indicating inflation rate.
+- year: The year corresponding to the recorded data.
+- month: The month corresponding to the recorded data.
+- inflation_band: A categorical classification indicating the range of inflation rates (e.g., low, medium, high).
 
 ### Business Requirements
 The analysis aims to:  
@@ -214,21 +232,26 @@ The design balances clarity for non-technical users with depth for analysts.
 
 ---
 
-### Unfixed Bugs
-
-
 ### Limitations
-
 ## Dataset Cleaning Challenges
-
 Several data quality limitations were encountered during the ETL process:
-
 - **Duplicate Keys**: Resolved 4,773 duplicate key combinations in country-level data, requiring systematic deduplication that may have reduced data granularity
 - **Date Parsing**: Multiple date formats required standardisation with some temporal data loss during conversion
 - **Numeric Conversion**: String-to-numeric coercion based on pattern matching may have missed edge cases
 - **Failed Features**: Some engineered features (e.g., `close_pct_change`) produced empty columns requiring cleanup
 - **Data Coverage**: Inconsistent completeness across countries and time periods affects trend analysis reliability
-- **String Standardization**: Country/item name harmonization may have incomplete matches affecting categorical analysis
+- **String Standardization**: Country/item name harmonisation may have incomplete matches affecting categorical analysis
+
+- **Temporal Limitations**: The dataset spans a fixed historical period, limiting the ability to forecast future food price trends accurately.  
+- **Simplification of Complex Factors**: The dataset does not capture all potential drivers of food inflation, such as domestic policies, subsidies, or informal markets.
+- - **Lack of information**: There was no direct variable indicating countries affected by conflict; we had to rely on news sources to identify high-conflict countries.  
+- **Power BI Limitations**  
+  - Some columns (e.g., date, drawdown, volatility) required pre-processing before they could be used effectively in Power BI visuals.  
+  - Large datasets can slow performance or limit interactivity in complex dashboards.  
+  - Certain calculations (e.g., derived inflation bands) were easier to perform in Python prior to importing the data into Power BI.
+- **Interpretation Caution**  
+  - Correlations observed in the dataset do not imply causation; findings are exploratory and educational rather than prescriptive.
+
 
 ## Analytical Impact
 
@@ -251,6 +274,16 @@ Several data quality limitations were encountered during the ETL process:
 - Seaborn
 - Plotly
 - MatPlotLib
+
+### Team Roles
+- **Harpreet (Project Manager): ** Oversaw planning, coordination, documentation, and GitHub project management. Also designed and developed the interactive dashboard in Power BI  
+- **Aaminah (ETL Lead): ** Handled data extraction, transformation, and preprocessing in Python  
+- **Richard (EDA Lead): **
+
+### Reflections
+Our team worked collaboratively throughout this project, with each member contributing their skills and insights to ensure a comprehensive analysis. Despite a brief absence from one of the memebers part due to personal reasons, the group maintained strong communication and coordination, which allowed us to stay on track and complete the tasks efficiently. We supported one another in data cleaning, hypothesis testing, and visualisation, fostering a positive and productive working environment.  
+
+Time constraints posed a challenge, limiting our ability to explore certain aspects of the dataset in greater depth. However, we managed to prioritise key analyses and deliver clear, evidence-based findings while maintaining quality. Overall, the experience highlighted the importance of teamwork, flexibility, and effective time management, and it strengthened our ability to collaborate on complex data projects under real-world conditions.
 
 ### Credits
 - **ChatGPT:** Supported with code guidance, data exploration ideas, markdown writing, and error troubleshooting  

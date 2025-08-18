@@ -289,9 +289,9 @@ Several data quality limitations were encountered during the ETL process:
 - MatPlotLib
 
 >### Team Roles
-- **Harpreet (Project Manager): ** Oversaw planning, coordination, documentation, and GitHub project management. Also designed and developed the interactive dashboard in Power BI  
-- **Aaminah (ETL Lead): ** Handled data extraction, transformation, and preprocessing in Python  
-- **Richard (EDA Lead): **
+- **Harpreet *(Project Manager)*:** Oversaw planning, coordination, documentation, and GitHub project management. Also designed and developed the interactive dashboard in Power BI  
+- **Aaminah *(ETL Lead)*:** Handled data extraction, transformation, and preprocessing in Python  
+- **Richard *(EDA Lead)*:** Handled Exploratory Data Analysis, Images & Visualisations, Hypothesis Testing, README formatting, and Dashboard finalisation. 
 
 >### Reflections
 
